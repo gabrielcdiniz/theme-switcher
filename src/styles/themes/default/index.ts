@@ -11,15 +11,15 @@ export const {
 } = createStitches({
   // see https://system-ui.com/theme/
   // see https://stitches.dev/docs/tokens
+  // applying in default theme
   theme: {
-    // applying in default theme
+    // applying in any color
     colors: {
-      // applying in any color
       backgroundColor: "#4c4c4c",
       textColor: "#f0f0f0",
     },
+    // applying in paddings, margins, etc
     space: {
-      // applying in paddings, margins, etc
       q: "4px",
       xn: "8px",
       n: "12px",
@@ -35,8 +35,8 @@ export const {
       h: "160px",
       g: "200px",
     },
+    // applying in width, height, etc
     sizes: {
-      // applying in width, height, etc
       q: "4px",
       xn: "8px",
       n: "12px",
@@ -52,8 +52,8 @@ export const {
       h: "160px",
       g: "200px",
     },
+    // applying in fonts sizes
     fontSizes: {
-      // applying in fonts sizes
       n: "12px",
       sm: "16px",
       md: "20px",
@@ -61,12 +61,12 @@ export const {
       xl: "32px",
       display: "64px",
     },
+    // applying in fonts
     fonts: {
-      // applying in fonts
       system: "system-ui",
     },
+    // applying in border-radius
     radii: {
-      // applying in border-radius
       none: "0",
       sm: "8px",
       md: "16px",
@@ -74,16 +74,16 @@ export const {
       pill: "500px",
       circ: "50%",
     },
+    // applying in border widths
     borderWidths: {
-      // applying in border widths
       none: "0",
       hair: "1px",
       thin: "2px",
       thick: "3px",
     },
   },
+  // applying in any situation
   utils: {
-    // applying in any situation
     mx: (value: string) => ({
       marginLeft: value,
       marginRight: value,
@@ -104,8 +104,8 @@ export const {
       borderRadius: value,
     }),
   },
+  // applying in specified break-points
   media: {
-    // applying in specified break-points
     mobile: "(min-width: 420px)",
     tablet: "(min-width: 768px)",
     desktop: "(min-width: 1220)",
