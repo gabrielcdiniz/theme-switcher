@@ -6,7 +6,7 @@ export const {
   styled, // used to create styled components
   createTheme, // create theme based on default styles
   css, // create css properties based on default styles
-  getCssText,
+  getCssText, // used to server-side rendering - see https://stitches.dev/docs/api#getcsstext
   globalCss, // create the global CSS, must be used only once
 } = createStitches({
   // see https://system-ui.com/theme/
