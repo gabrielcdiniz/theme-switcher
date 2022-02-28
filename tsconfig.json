@@ -22,6 +22,8 @@
       "@/helpers/*": ["helpers/*"],
       "@/hooks/*": ["hooks/*"],
 
+      "@/layouts/*": ["layouts/*"],
+
       "@/pages/*": ["pages/*"],
 
       "@/styles/*": ["styles/*"],
