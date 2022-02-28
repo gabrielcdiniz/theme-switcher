@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 import { changeTheme } from "@/helpers/theme/changeTheme";
 import type { Theme } from "@/types/theme";
@@ -17,10 +17,14 @@ const ThemeProvider = ({ children }: any) => {
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, switchTheme }}>
+    <ThemeContext.Provider value={{ theme, switchTheme, isDarkMode }}>
       {children}
     </ThemeContext.Provider>
   );
 };
 
-export { ThemeContext, ThemeProvider };
+const useTheme = () => {
+  return useContext(ThemeContext);
+};
+
+export { useTheme, ThemeProvider };

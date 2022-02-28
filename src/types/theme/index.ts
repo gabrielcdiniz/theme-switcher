@@ -14,4 +14,5 @@ export type Theme = {
     selector: string;
   } & ThemeTokens<ThemeProperties, "">;
   switchTheme: () => void;
+  isDarkMode: boolean;
 };
