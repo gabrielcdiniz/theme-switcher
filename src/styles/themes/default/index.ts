@@ -1,4 +1,5 @@
 import { createStitches } from "@stitches/react";
+import type { PropertyValue, ScaleValue } from "@stitches/react";
 
 export const {
   theme, // refers the default theme
@@ -15,8 +16,19 @@ export const {
   theme: {
     // applying in any color
     colors: {
-      backgroundColor: "#4c4c4c",
-      textColor: "#f0f0f0",
+      gray50: "hsl(0, 0%, 95%)",
+      gray100: "hsl(0, 0%, 85%)",
+      gray200: "hsl(0, 0%, 75%)",
+      gray300: "hsl(0, 0%, 65%)",
+      gray400: "hsl(0, 0%, 55%)",
+      gray500: "hsl(0, 0%, 45%)",
+      gray600: "hsl(0, 0%, 35%)",
+      gray700: "hsl(0, 0%, 25%)",
+      gray800: "hsl(0, 0%, 15%)",
+      gray900: "hsl(0, 0%, 10%)",
+
+      backgroundColor: "#f0f0f0",
+      textColor: "#4c4c4c",
     },
     // applying in paddings, margins, etc
     space: {
@@ -81,27 +93,45 @@ export const {
       thin: "2px",
       thick: "3px",
     },
+    shadows: {
+      gray50: "hsl(0, 0%, 95%)",
+      gray100: "hsl(0, 0%, 85%)",
+      gray200: "hsl(0, 0%, 75%)",
+      gray300: "hsl(0, 0%, 65%)",
+      gray400: "hsl(0, 0%, 55%)",
+      gray500: "hsl(0, 0%, 45%)",
+      gray600: "hsl(0, 0%, 35%)",
+      gray700: "hsl(0, 0%, 25%)",
+      gray800: "hsl(0, 0%, 15%)",
+      gray900: "hsl(0, 0%, 10%)",
+    },
   },
   // applying in any situation
   utils: {
-    mx: (value: string) => ({
+    mx: (value: PropertyValue<"margin">) => ({
       marginLeft: value,
       marginRight: value,
     }),
-    my: (value: string) => ({
+    my: (value: PropertyValue<"margin">) => ({
       marginTop: value,
       marginBottom: value,
     }),
-    px: (value: string) => ({
+    px: (value: PropertyValue<"padding">) => ({
       paddingLeft: value,
       paddingRight: value,
     }),
-    py: (value: string) => ({
+    py: (value: PropertyValue<"padding">) => ({
       paddingTop: value,
       paddingBottom: value,
     }),
-    br: (value: string) => ({
+    br: (value: ScaleValue<"radii">) => ({
       borderRadius: value,
+    }),
+    smallBoxShadow: (value: ScaleValue<"colors">) => ({
+      boxShadow: `
+        2px 2px 1px 1px ${value},
+        2px 2px 8px 3px ${value}
+      `,
     }),
   },
   // applying in specified break-points
