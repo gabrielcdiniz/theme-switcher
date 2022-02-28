@@ -1,6 +1,7 @@
 import type { AppProps } from "next/app";
 
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import { DefaultLayout } from "@/layouts/Default";
 import { globalCSS } from "@/styles/global";
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -8,7 +9,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <ThemeProvider>
-      <Component {...pageProps} />
+      <DefaultLayout>
+        <Component {...pageProps} />
+      </DefaultLayout>
     </ThemeProvider>
   );
 }
